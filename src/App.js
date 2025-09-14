@@ -21,7 +21,7 @@ function App() {
 
   const signup = async () => {
     try {
-      await axios.post("http://localhost:5000/signup", form);
+      await axios.post("http://login-backend-production-4d46.up.railway.app/signup", form);
       alert("Signup successful! Please login.");
       setPage("login");
     } catch {
