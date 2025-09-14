@@ -21,7 +21,7 @@ function App() {
 
   const signup = async () => {
     try {
-      await axios.post("http://login-backend-production-4d46.up.railway.app/signup", form);
+      await axios.post("https://login-backend-production-4d46.up.railway.app/signup", form);
       alert("Signup successful! Please login.");
       setPage("login");
     } catch {
@@ -31,7 +31,7 @@ function App() {
 
   const login = async () => {
     try {
-      const res = await axios.post("http://login-backend-production-4d46.up.railway.app/login", {
+      const res = await axios.post("https://login-backend-production-4d46.up.railway.app/login", {
         email: form.email,
         password: form.password,
       });
@@ -45,7 +45,7 @@ function App() {
   };
 
   const loadProfile = async (tk) => {
-    const res = await axios.get("http://login-backend-production-4d46.up.railway.app/profile", {
+    const res = await axios.get("https://login-backend-production-4d46.up.railway.app/profile", {
       headers: { Authorization: tk },
     });
     setProfile(res.data);
